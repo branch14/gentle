@@ -1,0 +1,11 @@
+new_template :mockup, "mockup.html"
+
+template :mockup do
+  at '#main' do
+    append do
+      'here some more content for #main'
+    end
+  end
+end
+
+

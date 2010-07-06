@@ -1,0 +1,11 @@
+new_template :mockup, "mockup.html"
+
+template :mockup do
+  at '#main' do
+    content do
+      "hello world"
+    end
+  end
+end
+
+this_will_raise_a_name_error

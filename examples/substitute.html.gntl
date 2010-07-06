@@ -1,0 +1,11 @@
+new_template :mockup, "mockup.html"
+
+template :mockup do
+  at '#main' do
+    substitute do
+      "here some alternate content to #main"
+    end
+  end
+end
+
+

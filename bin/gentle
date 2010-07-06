@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+require File.join(File.dirname(__FILE__), %w(.. lib gentle))
+# require 'gentle' # with rubygems
+
+gntl_file = ARGV.shift
+
+doc = Gentle::Loader.new(File.new(gntl_file, 'r')).compile
+puts doc.to_xhtml(:indent => 5, :encoding => 'UTF-8')
