@@ -85,6 +85,13 @@ module Gentle
     #------------------------------------------------------------
     # transformators
 
+    def html_content data=nil # enlive
+      data ||= yield
+      data = markup(data) if data.is_a?(String)
+      empty
+      @node.add_child data
+    end
+    
     def content data=nil # enlive
       @node.content = (data || yield)
     end
@@ -163,9 +170,6 @@ module Gentle
       substitute ''
     end
 
-    # def html_content
-    # end
-    #
     # def move
     # end
     # 
