@@ -1,11 +1,15 @@
 new_template :mockup, "mockup.html"
 
 template :mockup do
+
+  at(:xpath => '/html/head/title') { content 'hello world in title' }
+
   at '#main' do
     content do
-      "hello world"
+      markup "<h1>hello world</h1>"
     end
   end
+
 end
 
 

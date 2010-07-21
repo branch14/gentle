@@ -18,7 +18,7 @@ module Gentle
       @options = args.last.is_a?(Hash) ? args.last : {}
     end
     
-    def compile 
+    def render
       load_with_binding
     rescue SyntaxError, NameError, StandardError => err
       if @options[:html_errors]

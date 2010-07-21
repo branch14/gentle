@@ -5,5 +5,5 @@ require File.join(File.dirname(__FILE__), %w(.. lib gentle))
 
 gntl_file = ARGV.shift
 
-doc = Gentle::Loader.new(File.new(gntl_file, 'r')).compile
+doc = Gentle::Loader.new(File.new(gntl_file, 'r')).render
 puts doc.to_xhtml(:indent => 5, :encoding => 'UTF-8')

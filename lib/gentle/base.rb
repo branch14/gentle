@@ -52,8 +52,10 @@ module Gentle
       stack = @node
       if options.has_key?(:css)
         @node = @document.at_css options[:css]
+        raise "CSS3 Selector '#{options[:css]}' did not match anything" unless @node
       elsif options.has_key?(:xpath)
         @node = @document.at_xpath options[:xpath]
+        raise "XPath '#{options[:xpath]}' did not match anything" unless @node
       end
       yield if block_given?
       @node = stack
@@ -73,6 +75,8 @@ module Gentle
     end
 
     # parses the markup and returns a new Nokogiri::XML::DocumentFragment
+    #
+    # FIXME doesn't work as advertised
     def markup a_string_with_markup=nil
       a_string_with_markup ||= yield
       Nokogiri::XML::DocumentFragment.parse(a_string_with_markup)

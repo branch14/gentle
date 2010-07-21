@@ -13,7 +13,7 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'nokogiri', '~> 1.4.1'
   
   gem.email = 'phil@branch14.org'
-  gem.homepage = 'http://github.com/brnach14/' + gem.name
+  gem.homepage = 'http://github.com/branch14/' + gem.name
   gem.authors = ['Phil Hofmann']
   
   gem.has_rdoc = true
