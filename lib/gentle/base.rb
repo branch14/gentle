@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'nokogiri'
 
-# If not explicilty stated differently, the following applies to every
+# If not explicilty stated different, the following applies to every
 # transformer: +data+ may be passed as value or as block. If a value
 # is given it's taken as +data+, if no value is given the block will
 # be called and the result of the block is taken as +data+. +data+ can
@@ -18,7 +18,7 @@ require 'nokogiri'
 #
 # This is also useful, when working with Rails' render :partial
 #
-#  +markup(render(:partial => 'some-partial', :collection => @worlds))+
+#  +markup(render(:partial => 'some_partial', :collection => @worlds))+
 #
 module Gentle
   class Base

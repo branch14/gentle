@@ -4,7 +4,7 @@ Gem::Specification.new do |gem|
   gem.name = 'gentle'
   gem.version = Gentle::VERSION
   
-  gem.summary = "a templating engine based on css3 selectors and transformators"
+  gem.summary = "a templating engine based on css3 selectors and transformations"
   gem.description = "Gentle lets you use mockups as templates -- no need to even touch the markup."
   
   gem.files = Dir['Rakefile', '{bin,lib}/**/*', 'README', 'LICENSE'] & `git ls-files`.split("\n")
