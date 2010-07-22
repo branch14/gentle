@@ -1,6 +1,6 @@
 ## Introduction to gentle
 
-'gentle' gently touches HTML templates.
+'gentle' lets you be gentle to your markup.
 
 If you have worked with ERb or HAML, which you very likely have, since
 you are looking into gentle, you might have found yourself cutting and
@@ -14,9 +14,9 @@ selectors and transformations.
 
 ## Acknowledgments
 
-gentle is mainly inspired and in almost every other way influenced by
-Christophe Grand's Enlive (implemented in Clojure). And it has to be
-said: Not only Enlive but also Clojure are awesome.
+gentle is mainly inspired Christophe Grand's Enlive (implemented in
+Clojure). And it has to be said: Not only Enlive but also Clojure are
+awesome.
 
 ## gentle on Rails
 
@@ -42,9 +42,3 @@ fallback.
  * [1] http://github.com/cgrand/enlive
  * [2] http://api.jquery.com/category/manipulation/
  * [3] http://nokogiri.org/Nokogiri/XML/Node.html
-
-# Notes
-
-## Rails Templating
-
-* http://github.com/nex3/haml/blob/master/lib/haml/template/plugin.rb
