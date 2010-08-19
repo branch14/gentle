@@ -25,6 +25,7 @@ module Gentle
     
     def initialize
       @templates = {}
+      @snippets = {} 
     end
 
     def new_template name, path
@@ -36,7 +37,20 @@ module Gentle
       yield if block_given?
       @document
     end
-    
+
+    def new_snippet snippet_name, template_name, css_path
+      @snippets[snippet_name.to_sym] = 
+        @templates[template_name.to_sym].at(css_path)
+    end
+    alias_method :new_fragment, :new_snippet
+
+    def snippet name
+      @document = @snippets[name.to_sym]
+      yield if block_given?
+      @document
+    end
+    alias_method :fragment, :snippet
+
     #------------------------------------------------------------
     # selector
 
@@ -64,8 +78,14 @@ module Gentle
     #------------------------------------------------------------
     # helpers
 
+    # delegeta to include at class level
+    def include(klass)
+      self.class.send(:include, klass)
+    end
+
     # returns a new Nokogiri::XML::Node
     def node *args
+      args ||= [yield].flatten
       Nokogiri::XML::Node.new(*(args << @document))
     end
 
